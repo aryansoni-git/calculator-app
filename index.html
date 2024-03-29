@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="calculator">
+        <div id="display">
+            <h1 id="result">0</h1>
+            <p id="history"></p>
+        </div>
+        <div id="button-container">
+            <button class="btn" id="Escape">C</button>
+            <button class="btn" id="Backspace">◀</button>
+            <button class="btn" id="%">%</button>
+            <button class="btn-color violet" id="/">÷</button>
+            <button class="btn" id="7">7</button>
+            <button class="btn" id="8">8</button>
+            <button class="btn" id="9">9</button>
+            <button class="btn-color orangered" id="*">×</button>
+            <button class="btn" id="4">4</button>
+            <button class="btn" id="5">5</button>
+            <button class="btn" id="6">6</button>
+            <button class="btn-color blue" id="-">-</button>
+            <button class="btn" id="1">1</button>
+            <button class="btn" id="2">2</button>
+            <button class="btn" id="3">3</button>
+            <button class="btn-color orange" id="+">+</button>
+            <button class="btn zero number" id="0">0</button>
+            <button class="btn" id="dot">.</button>
+            <button class="btn-color green" id="Enter">=</button>
+        </div>
+    </div>
+    <footer>
+        Copyright &copy; <span id="currentYear"></span> aryansoni
+        <a href="https://github.com/aryansoni-git" target="_blank"><img src="./images/github-original.svg"
+                alt="aryansoni-git"></a>
+    </footer>
+    <script> document.querySelector('#currentYear').textContent = new Date().getFullYear(); </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
