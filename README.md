@@ -2,7 +2,7 @@
 
 ![cover](./images/cover.png)
 
-You can try the calculator live [here]()!
+You can try the calculator live [here](https://aryansoni-git.github.io/odin-calculator/)!
 
 ## Description
 
