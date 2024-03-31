@@ -60,12 +60,15 @@ buttonContainer.addEventListener('click', (e) => {
             }
             break;
         // Operators
-        case '%':
-        case '/':
-        case '*':
-        case '-':
-        case '+':
-            historyElement.textContent += ` ${button.textContent} `;
+        case '%': historyElement.textContent += ' % ';
+            break;
+        case '/': historyElement.textContent += ' / ';
+            break;
+        case '*': historyElement.textContent += ' * ';
+            break;
+        case '-': historyElement.textContent += ' - ';
+            break;
+        case '+': historyElement.textContent += ' + ';
             break;
         // Clear and Evaluate
         case 'Escape':
@@ -91,21 +94,21 @@ buttonContainer.addEventListener('click', (e) => {
             break;
         default: // This section needs bug fixes and improvements...
             // Append digit to history if clicked button represents a digit
-            if (!isNaN(parseInt(id))) {
-                historyText += id;
+            if (!isNaN(parseInt(button.id))) {
+                historyText += button.id;
             }
             // Append decimal point to history if dot button clicked and history doesn't have one
             else if (id === 'dot' && !historyText.includes('.')) {
-                historyText += id;
+                historyText += button.id;
             }
             // Handle operators (+, -, *, /, %)
-            else if (/[-+*/%]/.test(id)) {
+            else if (/[-+*/%]/.test(button.id)) {
                 // Add operator to history if last character isn't already an operator
                 if (!/[-+*/%]/.test(historyText.charAt(historyText.length - 1))) {
-                    historyText += ` ${id} `;
+                    historyText += ` ${button.id} `;
                 } else {
                     // Replace last operator if it's already an operator
-                    historyText = historyText.slice(0, -1) + id + ' ';
+                    historyText = historyText.slice(0, -1) + button.id + ' ';
                 }
             }
             break;
